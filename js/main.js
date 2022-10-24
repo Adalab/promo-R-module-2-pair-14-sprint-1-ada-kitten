@@ -59,7 +59,8 @@ const kittenThreeRace ='British Shorthair';
 const input_search_desc = document.querySelector('.js_in_search_desc');
 input_search_desc.value = 'cariñoso';
 const descrSearchText = input_search_desc.value;
-if( kittenOneDesc.includes(descrSearchText) ) {
+
+/*if( kittenOneDesc.includes(descrSearchText) ) {
      console.log();
   } else
   
@@ -69,12 +70,17 @@ if( kittenOneDesc.includes(descrSearchText) ) {
   
   if( kittenThreeDesc.includes(descrSearchText) ) {
      
-  } else
+  } else */
 
-  const age = 35;
 
-/*if (age > 30) {
-  console.log('Tienes más de 30 años'); // Esta línea se ejecuta solo si se cumple la condición
-} else if (age >= 20) {
-  console.log('Tienes entre 20 y 30 años'); // Esta línea se ejecuta solo si se NO cumple la primera condición y SÍ se cumple la segunda
-}*/
+
+const btnNav = document.querySelector ('.js-btn-nav');
+
+btnNav.addEventListener ('click', (event) => {
+  event.preventDefault();
+  if (sectionForm.classList.contains ('collapsed')) {
+    sectionForm.classList.remove ('collapsed');
+  } else {
+    sectionForm.classList.add ('collapsed');
+  }
+});
